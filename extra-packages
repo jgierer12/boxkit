@@ -4,6 +4,7 @@ chezmoi
 fzf
 just
 helix
+tree-sitter-grammars
 micro
 vim
 ncdu
