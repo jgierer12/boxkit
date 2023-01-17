@@ -15,6 +15,7 @@ fd
 jq
 httpie
 wl-clipboard
+github-cli
 python3
 nodejs
 npm
