@@ -29,12 +29,12 @@ We're starting small but have big aspirations.
 
 If you use distrobox:
 
-    distrobox create -i ghcr.io/ublue-os/boxkit -n boxkit
+    distrobox create -i ghcr.io/jgierer12/boxkit -n boxkit
     distrobox enter boxkit
     
 If you use toolbx:
 
-    toolbox create -i ghcr.io/ublue-os/boxkit -c boxkit
+    toolbox create -i ghcr.io/jgierer12/boxkit -c boxkit
     toolbox enter boxkit
 
 ### Pull down your config
