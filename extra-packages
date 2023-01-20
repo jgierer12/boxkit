@@ -16,6 +16,7 @@ jq
 httpie
 wl-clipboard
 github-cli
+build-base
 python3
 nodejs
 npm
