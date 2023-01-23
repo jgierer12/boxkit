@@ -1,11 +1,11 @@
 # boxkit
 
 A base image and action for Toolbx and Distrobox.
-Sure, you can use the distro you're used to, but what if ... 
+Sure, you can use the distro you're used to, but what if ...
 
-This image is going to experiment with what a "born from cloud native" UNIX terminal experience would look like. 
+This image is going to experiment with what a "born from cloud native" UNIX terminal experience would look like.
 It is designed to be used in conjuction with a [dotfile manager](https://dotfiles.github.io/utilities/) so that the entire image and config are managed in git.
-It's designed to be the companion userspace for cloud-native desktops. 
+It's designed to be the companion userspace for cloud-native desktops.
 We're starting small but have big aspirations.
 
 - Starts with the latest Alpine image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
@@ -31,7 +31,7 @@ If you use distrobox:
 
     distrobox create -i ghcr.io/jgierer12/boxkit -n boxkit
     distrobox enter boxkit
-    
+
 If you use toolbx:
 
     toolbox create -i ghcr.io/jgierer12/boxkit -c boxkit
@@ -58,7 +58,7 @@ While LTS images pay the bills they move at that pace for a reason, I wanted:
 
 And of course, as the user space for a cloud-native desktop the biggest reason is it's everywhere in the stack, why not be the "default terminal"?
 
-Also, I've never gotten really to know Alpine, the problem with running distros like this bare metal on my PC is that there's a whole bunch of hardware quirks and all sorts of little enablement things that more generalized distros tend to get right. 
+Also, I've never gotten really to know Alpine, the problem with running distros like this bare metal on my PC is that there's a whole bunch of hardware quirks and all sorts of little enablement things that more generalized distros tend to get right.
 
 But in a Toolbx/Distrobox world the kernel and anything that talks to hardware is handled by the host operating system.
 This let's us concentrate on just the CLI experience, get yourself some of that UNIX bling.
@@ -71,22 +71,22 @@ Also apk is fast. Watch the video for more!
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
     cosign verify --key cosign.pub ghcr.io/ublue-os/boxkit
-    
+
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign. The public key can be in your public repo (your users need it to check the signatures), and you can paste the private key in Settings -> Secrets -> Actions.
 
 ## Scope and Cynicism
 
-I know what you're thinking, we're just going to shove everything from [Modern UNIX](https://github.com/ibraheemdev/modern-unix) in there and it's going to look like a glitter explosion. 
+I know what you're thinking, we're just going to shove everything from [Modern UNIX](https://github.com/ibraheemdev/modern-unix) in there and it's going to look like a glitter explosion.
 
-That's why I'm going to be strongly opinionated, so use this as a base to build your own perfect CLI experience. 
-Custom configs are NOT included, those belong in your dotfiles, use them in combination with an image. 
+That's why I'm going to be strongly opinionated, so use this as a base to build your own perfect CLI experience.
+Custom configs are NOT included, those belong in your dotfiles, use them in combination with an image.
 
-This is a tame first effort, one of you out there is going to make something better than this, the perfect CLI workspace, I salute you. 
+This is a tame first effort, one of you out there is going to make something better than this, the perfect CLI workspace, I salute you.
 
 ## Finding Good Base Images
 
 Of course you can make this however you want, but start with the [Toolbx Community images](https://github.com/toolbx-images/images).
-These are a set of mostly-stock images with packages needed to run as a toolbox/distrobox already installed. 
+These are a set of mostly-stock images with packages needed to run as a toolbox/distrobox already installed.
 
 Try to derive your blingbox from those base images so we can all help maintain them over time, you can't have bling without good stock!
 
