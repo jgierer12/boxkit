@@ -41,27 +41,6 @@ If you use toolbx:
 
 Use `chezmoi` to pull down your dotfiles and set up git sync.
 
-### Automatic updates
-
-This boxkit supports automatic updates. If Podman's auto-update service is enabled, it will periodically check for updates to the image, and update the container if there are any.
-
-> **Warning**
-> Updating the container will recreate it from scratch, meaning that any of your system-level customizations (e.g. installed packages) will be reset!
->
-> If you don't want this, make sure the auto-update service is disabled, or fork the repo and remove the `autoupdate` label from the `Containerfile`.
-
-The auto-update service is disabled by default. To enable it, run:
-
-```sh
-$ systemctl enable podman-auto-update.timer
-```
-
-You can also manually check for and install updates:
-
-```sh
-$ podman auto-update
-```
-
 ### Make your own
 
 Fork and add programs to this this image - over time you'll end up with the perfect CLI for you.

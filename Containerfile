@@ -3,8 +3,7 @@ FROM quay.io/toolbx-images/alpine-toolbox:3.17
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
       summary="A cloud-native terminal experience" \
-      maintainer="jonas@gierer.xyz" \
-      io.containers.autoupdate="registry"
+      maintainer="jonas@gierer.xyz"
 
 COPY extra-packages /
 RUN apk update && \
