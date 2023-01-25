@@ -10,6 +10,7 @@ vim
 ncdu
 neofetch
 starship
+fish
 ripgrep
 fd
 jq

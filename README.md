@@ -29,13 +29,13 @@ We're starting small but have big aspirations.
 
 If you use distrobox:
 
-    distrobox create -i ghcr.io/jgierer12/boxkit -n boxkit
+    SHELL=/usr/bin/fish distrobox create -i ghcr.io/jgierer12/boxkit -n boxkit
     distrobox enter boxkit
 
 If you use toolbx:
 
     toolbox create -i ghcr.io/jgierer12/boxkit -c boxkit
-    toolbox enter boxkit
+    toolbox enter boxkit -- fish
 
 ### Pull down your config
 
